@@ -197,7 +197,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boardX: 7
   boardY: 1
-  state: {x: 0, y: 0}
   spriteRenderer: {fileID: 0}
   empty: {fileID: 0}
   tunas: {fileID: 0}
@@ -207,6 +206,9 @@ MonoBehaviour:
   pagar: {fileID: 0}
   _GM: {fileID: 123271521}
   area: {fileID: 0}
+  direction: 0
+  state: 0
+  toNextState: 0
 --- !u!212 &16697909
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -872,7 +874,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boardX: 5
   boardY: 7
-  state: {x: 0, y: 0}
   spriteRenderer: {fileID: 0}
   empty: {fileID: 0}
   tunas: {fileID: 0}
@@ -882,6 +883,9 @@ MonoBehaviour:
   pagar: {fileID: 0}
   _GM: {fileID: 123271521}
   area: {fileID: 0}
+  direction: 0
+  state: 0
+  toNextState: 0
 --- !u!212 &73800036
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1143,7 +1147,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boardX: 7
   boardY: 8
-  state: {x: 0, y: 0}
   spriteRenderer: {fileID: 0}
   empty: {fileID: 0}
   tunas: {fileID: 0}
@@ -1153,6 +1156,9 @@ MonoBehaviour:
   pagar: {fileID: 0}
   _GM: {fileID: 123271521}
   area: {fileID: 0}
+  direction: 0
+  state: 0
+  toNextState: 0
 --- !u!212 &81356600
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1279,7 +1285,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boardX: 9
   boardY: 1
-  state: {x: 0, y: 0}
   spriteRenderer: {fileID: 0}
   empty: {fileID: 0}
   tunas: {fileID: 0}
@@ -1289,6 +1294,9 @@ MonoBehaviour:
   pagar: {fileID: 0}
   _GM: {fileID: 123271521}
   area: {fileID: 0}
+  direction: 0
+  state: 0
+  toNextState: 0
 --- !u!212 &89648885
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1341,6 +1349,139 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &91034286
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 91034287}
+  - component: {fileID: 91034289}
+  - component: {fileID: 91034288}
+  - component: {fileID: 91034290}
+  m_Layer: 5
+  m_Name: Up
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &91034287
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 91034286}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1312965462}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 32}
+  m_SizeDelta: {x: 32, y: 32}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &91034288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 91034286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &91034289
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 91034286}
+  m_CullTransparentMesh: 1
+--- !u!114 &91034290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 91034286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 91034288}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 123271521}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: setDirection
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &123271519
 GameObject:
   m_ObjectHideFlags: 0
@@ -1402,6 +1543,12 @@ MonoBehaviour:
   - {fileID: 1265883239}
   _hand: 0
   _InventorySlot: 
+  _darkTint: {fileID: 562934494}
+  _plantingUI: {fileID: 1312965461}
+  _x: 0
+  _y: 0
+  _tiles: {fileID: 1900850538}
+  _state: none
 --- !u!114 &123271522
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1500,7 +1647,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boardX: 3
   boardY: 1
-  state: {x: 0, y: 0}
   spriteRenderer: {fileID: 0}
   empty: {fileID: 0}
   tunas: {fileID: 0}
@@ -1510,6 +1656,9 @@ MonoBehaviour:
   pagar: {fileID: 0}
   _GM: {fileID: 123271521}
   area: {fileID: 0}
+  direction: 0
+  state: 0
+  toNextState: 0
 --- !u!212 &144038814
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1636,7 +1785,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boardX: 8
   boardY: 1
-  state: {x: 0, y: 0}
   spriteRenderer: {fileID: 0}
   empty: {fileID: 0}
   tunas: {fileID: 0}
@@ -1646,6 +1794,9 @@ MonoBehaviour:
   pagar: {fileID: 0}
   _GM: {fileID: 123271521}
   area: {fileID: 0}
+  direction: 0
+  state: 0
+  toNextState: 0
 --- !u!212 &178576263
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1907,7 +2058,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boardX: 4
   boardY: 3
-  state: {x: 0, y: 0}
   spriteRenderer: {fileID: 0}
   empty: {fileID: 0}
   tunas: {fileID: 0}
@@ -1917,6 +2067,9 @@ MonoBehaviour:
   pagar: {fileID: 0}
   _GM: {fileID: 123271521}
   area: {fileID: 0}
+  direction: 0
+  state: 0
+  toNextState: 0
 --- !u!212 &187287252
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2043,7 +2196,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boardX: 3
   boardY: 8
-  state: {x: 0, y: 0}
   spriteRenderer: {fileID: 0}
   empty: {fileID: 0}
   tunas: {fileID: 0}
@@ -2053,6 +2205,9 @@ MonoBehaviour:
   pagar: {fileID: 0}
   _GM: {fileID: 123271521}
   area: {fileID: 0}
+  direction: 0
+  state: 0
+  toNextState: 0
 --- !u!212 &216774715
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2179,7 +2334,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boardX: 9
   boardY: 8
-  state: {x: 0, y: 0}
   spriteRenderer: {fileID: 0}
   empty: {fileID: 0}
   tunas: {fileID: 0}
@@ -2189,6 +2343,9 @@ MonoBehaviour:
   pagar: {fileID: 0}
   _GM: {fileID: 123271521}
   area: {fileID: 0}
+  direction: 0
+  state: 0
+  toNextState: 0
 --- !u!212 &222538911
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2315,7 +2472,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boardX: 5
   boardY: 3
-  state: {x: 0, y: 0}
   spriteRenderer: {fileID: 0}
   empty: {fileID: 0}
   tunas: {fileID: 0}
@@ -2325,6 +2481,9 @@ MonoBehaviour:
   pagar: {fileID: 0}
   _GM: {fileID: 123271521}
   area: {fileID: 0}
+  direction: 0
+  state: 0
+  toNextState: 0
 --- !u!212 &252256701
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2425,7 +2584,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boardX: 2
   boardY: 5
-  state: {x: 0, y: 0}
   spriteRenderer: {fileID: 0}
   empty: {fileID: 0}
   tunas: {fileID: 0}
@@ -2435,6 +2593,9 @@ MonoBehaviour:
   pagar: {fileID: 0}
   _GM: {fileID: 123271521}
   area: {fileID: 0}
+  direction: 0
+  state: 0
+  toNextState: 0
 --- !u!212 &273781019
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2587,7 +2748,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boardX: 5
   boardY: 2
-  state: {x: 0, y: 0}
   spriteRenderer: {fileID: 0}
   empty: {fileID: 0}
   tunas: {fileID: 0}
@@ -2597,6 +2757,9 @@ MonoBehaviour:
   pagar: {fileID: 0}
   _GM: {fileID: 123271521}
   area: {fileID: 0}
+  direction: 0
+  state: 0
+  toNextState: 0
 --- !u!212 &291913447
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2649,6 +2812,139 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &302726643
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 302726644}
+  - component: {fileID: 302726646}
+  - component: {fileID: 302726645}
+  - component: {fileID: 302726647}
+  m_Layer: 5
+  m_Name: Down
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &302726644
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 302726643}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1312965462}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -32}
+  m_SizeDelta: {x: 32, y: 32}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &302726645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 302726643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &302726646
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 302726643}
+  m_CullTransparentMesh: 1
+--- !u!114 &302726647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 302726643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 302726645}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 123271521}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: setDirection
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &319945542
 GameObject:
   m_ObjectHideFlags: 0
@@ -2723,7 +3019,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boardX: 3
   boardY: 7
-  state: {x: 0, y: 0}
   spriteRenderer: {fileID: 0}
   empty: {fileID: 0}
   tunas: {fileID: 0}
@@ -2733,6 +3028,9 @@ MonoBehaviour:
   pagar: {fileID: 0}
   _GM: {fileID: 123271521}
   area: {fileID: 0}
+  direction: 0
+  state: 0
+  toNextState: 0
 --- !u!212 &319945546
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2859,7 +3157,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boardX: 7
   boardY: 7
-  state: {x: 0, y: 0}
   spriteRenderer: {fileID: 0}
   empty: {fileID: 0}
   tunas: {fileID: 0}
@@ -2869,6 +3166,9 @@ MonoBehaviour:
   pagar: {fileID: 0}
   _GM: {fileID: 123271521}
   area: {fileID: 0}
+  direction: 0
+  state: 0
+  toNextState: 0
 --- !u!212 &323294660
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2995,7 +3295,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boardX: 8
   boardY: 3
-  state: {x: 0, y: 0}
   spriteRenderer: {fileID: 0}
   empty: {fileID: 0}
   tunas: {fileID: 0}
@@ -3005,6 +3304,9 @@ MonoBehaviour:
   pagar: {fileID: 0}
   _GM: {fileID: 123271521}
   area: {fileID: 0}
+  direction: 0
+  state: 0
+  toNextState: 0
 --- !u!212 &350698731
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3131,7 +3433,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boardX: 5
   boardY: 8
-  state: {x: 0, y: 0}
   spriteRenderer: {fileID: 0}
   empty: {fileID: 0}
   tunas: {fileID: 0}
@@ -3141,6 +3442,9 @@ MonoBehaviour:
   pagar: {fileID: 0}
   _GM: {fileID: 123271521}
   area: {fileID: 0}
+  direction: 0
+  state: 0
+  toNextState: 0
 --- !u!212 &379335614
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3402,7 +3706,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boardX: 9
   boardY: 2
-  state: {x: 0, y: 0}
   spriteRenderer: {fileID: 0}
   empty: {fileID: 0}
   tunas: {fileID: 0}
@@ -3412,6 +3715,9 @@ MonoBehaviour:
   pagar: {fileID: 0}
   _GM: {fileID: 123271521}
   area: {fileID: 0}
+  direction: 0
+  state: 0
+  toNextState: 0
 --- !u!212 &425836364
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3512,7 +3818,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boardX: 1
   boardY: 3
-  state: {x: 0, y: 0}
   spriteRenderer: {fileID: 0}
   empty: {fileID: 0}
   tunas: {fileID: 0}
@@ -3522,6 +3827,9 @@ MonoBehaviour:
   pagar: {fileID: 0}
   _GM: {fileID: 123271521}
   area: {fileID: 0}
+  direction: 0
+  state: 0
+  toNextState: 0
 --- !u!212 &440249004
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3674,7 +3982,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boardX: 4
   boardY: 1
-  state: {x: 0, y: 0}
   spriteRenderer: {fileID: 0}
   empty: {fileID: 0}
   tunas: {fileID: 0}
@@ -3684,6 +3991,9 @@ MonoBehaviour:
   pagar: {fileID: 0}
   _GM: {fileID: 123271521}
   area: {fileID: 0}
+  direction: 0
+  state: 0
+  toNextState: 0
 --- !u!212 &460986011
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3810,7 +4120,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boardX: 3
   boardY: 5
-  state: {x: 0, y: 0}
   spriteRenderer: {fileID: 0}
   empty: {fileID: 0}
   tunas: {fileID: 0}
@@ -3820,6 +4129,9 @@ MonoBehaviour:
   pagar: {fileID: 0}
   _GM: {fileID: 123271521}
   area: {fileID: 0}
+  direction: 0
+  state: 0
+  toNextState: 0
 --- !u!212 &505882588
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3872,6 +4184,82 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &562934494
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 562934495}
+  - component: {fileID: 562934497}
+  - component: {fileID: 562934496}
+  m_Layer: 5
+  m_Name: darkTint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &562934495
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 562934494}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1723222117}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 800, y: 380}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &562934496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 562934494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.74509805}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &562934497
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 562934494}
+  m_CullTransparentMesh: 1
 --- !u!1 &585702108
 GameObject:
   m_ObjectHideFlags: 0
@@ -4080,7 +4468,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boardX: 6
   boardY: 3
-  state: {x: 0, y: 0}
   spriteRenderer: {fileID: 0}
   empty: {fileID: 0}
   tunas: {fileID: 0}
@@ -4090,6 +4477,9 @@ MonoBehaviour:
   pagar: {fileID: 0}
   _GM: {fileID: 123271521}
   area: {fileID: 0}
+  direction: 0
+  state: 0
+  toNextState: 0
 --- !u!212 &627765618
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4190,7 +4580,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boardX: 2
   boardY: 3
-  state: {x: 0, y: 0}
   spriteRenderer: {fileID: 0}
   empty: {fileID: 0}
   tunas: {fileID: 0}
@@ -4200,6 +4589,9 @@ MonoBehaviour:
   pagar: {fileID: 0}
   _GM: {fileID: 123271521}
   area: {fileID: 0}
+  direction: 0
+  state: 0
+  toNextState: 0
 --- !u!212 &636731669
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4352,7 +4744,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boardX: 9
   boardY: 6
-  state: {x: 0, y: 0}
   spriteRenderer: {fileID: 0}
   empty: {fileID: 0}
   tunas: {fileID: 0}
@@ -4362,6 +4753,9 @@ MonoBehaviour:
   pagar: {fileID: 0}
   _GM: {fileID: 123271521}
   area: {fileID: 0}
+  direction: 0
+  state: 0
+  toNextState: 0
 --- !u!212 &642475731
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4534,7 +4928,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boardX: 8
   boardY: 2
-  state: {x: 0, y: 0}
   spriteRenderer: {fileID: 0}
   empty: {fileID: 0}
   tunas: {fileID: 0}
@@ -4544,6 +4937,9 @@ MonoBehaviour:
   pagar: {fileID: 0}
   _GM: {fileID: 123271521}
   area: {fileID: 0}
+  direction: 0
+  state: 0
+  toNextState: 0
 --- !u!212 &692574602
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4670,7 +5066,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boardX: 7
   boardY: 9
-  state: {x: 0, y: 0}
   spriteRenderer: {fileID: 0}
   empty: {fileID: 0}
   tunas: {fileID: 0}
@@ -4680,6 +5075,9 @@ MonoBehaviour:
   pagar: {fileID: 0}
   _GM: {fileID: 123271521}
   area: {fileID: 0}
+  direction: 0
+  state: 0
+  toNextState: 0
 --- !u!212 &703887085
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4806,7 +5204,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boardX: 3
   boardY: 2
-  state: {x: 0, y: 0}
   spriteRenderer: {fileID: 0}
   empty: {fileID: 0}
   tunas: {fileID: 0}
@@ -4816,6 +5213,9 @@ MonoBehaviour:
   pagar: {fileID: 0}
   _GM: {fileID: 123271521}
   area: {fileID: 0}
+  direction: 0
+  state: 0
+  toNextState: 0
 --- !u!212 &791355460
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4942,7 +5342,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boardX: 6
   boardY: 1
-  state: {x: 0, y: 0}
   spriteRenderer: {fileID: 0}
   empty: {fileID: 0}
   tunas: {fileID: 0}
@@ -4952,6 +5351,9 @@ MonoBehaviour:
   pagar: {fileID: 0}
   _GM: {fileID: 123271521}
   area: {fileID: 0}
+  direction: 0
+  state: 0
+  toNextState: 0
 --- !u!212 &793019421
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5165,6 +5567,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 677757558}
+  - {fileID: 1723222117}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5247,7 +5650,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boardX: 8
   boardY: 9
-  state: {x: 0, y: 0}
   spriteRenderer: {fileID: 0}
   empty: {fileID: 0}
   tunas: {fileID: 0}
@@ -5257,6 +5659,9 @@ MonoBehaviour:
   pagar: {fileID: 0}
   _GM: {fileID: 123271521}
   area: {fileID: 0}
+  direction: 0
+  state: 0
+  toNextState: 0
 --- !u!212 &857206077
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5383,7 +5788,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boardX: 7
   boardY: 5
-  state: {x: 0, y: 0}
   spriteRenderer: {fileID: 0}
   empty: {fileID: 0}
   tunas: {fileID: 0}
@@ -5393,6 +5797,9 @@ MonoBehaviour:
   pagar: {fileID: 0}
   _GM: {fileID: 123271521}
   area: {fileID: 0}
+  direction: 0
+  state: 0
+  toNextState: 0
 --- !u!212 &903399121
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5493,7 +5900,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boardX: 2
   boardY: 9
-  state: {x: 0, y: 0}
   spriteRenderer: {fileID: 0}
   empty: {fileID: 0}
   tunas: {fileID: 0}
@@ -5503,6 +5909,9 @@ MonoBehaviour:
   pagar: {fileID: 0}
   _GM: {fileID: 123271521}
   area: {fileID: 0}
+  direction: 0
+  state: 0
+  toNextState: 0
 --- !u!212 &919183435
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5764,7 +6173,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boardX: 1
   boardY: 5
-  state: {x: 0, y: 0}
   spriteRenderer: {fileID: 0}
   empty: {fileID: 0}
   tunas: {fileID: 0}
@@ -5774,6 +6182,9 @@ MonoBehaviour:
   pagar: {fileID: 0}
   _GM: {fileID: 123271521}
   area: {fileID: 0}
+  direction: 0
+  state: 0
+  toNextState: 0
 --- !u!212 &963687554
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5926,7 +6337,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boardX: 6
   boardY: 8
-  state: {x: 0, y: 0}
   spriteRenderer: {fileID: 0}
   empty: {fileID: 0}
   tunas: {fileID: 0}
@@ -5936,6 +6346,9 @@ MonoBehaviour:
   pagar: {fileID: 0}
   _GM: {fileID: 123271521}
   area: {fileID: 0}
+  direction: 0
+  state: 0
+  toNextState: 0
 --- !u!212 &1008609078
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6062,7 +6475,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boardX: 7
   boardY: 6
-  state: {x: 0, y: 0}
   spriteRenderer: {fileID: 0}
   empty: {fileID: 0}
   tunas: {fileID: 0}
@@ -6072,6 +6484,9 @@ MonoBehaviour:
   pagar: {fileID: 0}
   _GM: {fileID: 123271521}
   area: {fileID: 0}
+  direction: 0
+  state: 0
+  toNextState: 0
 --- !u!212 &1066515692
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6198,7 +6613,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boardX: 7
   boardY: 3
-  state: {x: 0, y: 0}
   spriteRenderer: {fileID: 0}
   empty: {fileID: 0}
   tunas: {fileID: 0}
@@ -6208,6 +6622,9 @@ MonoBehaviour:
   pagar: {fileID: 0}
   _GM: {fileID: 123271521}
   area: {fileID: 0}
+  direction: 0
+  state: 0
+  toNextState: 0
 --- !u!212 &1093080610
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6260,6 +6677,139 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1093994833
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1093994834}
+  - component: {fileID: 1093994836}
+  - component: {fileID: 1093994835}
+  - component: {fileID: 1093994837}
+  m_Layer: 5
+  m_Name: Cancel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1093994834
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1093994833}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1312965462}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 64, y: 64}
+  m_SizeDelta: {x: 32, y: 32}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1093994835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1093994833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1093994836
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1093994833}
+  m_CullTransparentMesh: 1
+--- !u!114 &1093994837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1093994833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1093994835}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 123271521}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: setDirection
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1094493698
 GameObject:
   m_ObjectHideFlags: 0
@@ -6469,7 +7019,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boardX: 8
   boardY: 4
-  state: {x: 0, y: 0}
   spriteRenderer: {fileID: 0}
   empty: {fileID: 0}
   tunas: {fileID: 0}
@@ -6479,6 +7028,9 @@ MonoBehaviour:
   pagar: {fileID: 0}
   _GM: {fileID: 123271521}
   area: {fileID: 0}
+  direction: 0
+  state: 0
+  toNextState: 0
 --- !u!212 &1095518197
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6713,7 +7265,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boardX: 2
   boardY: 2
-  state: {x: 0, y: 0}
   spriteRenderer: {fileID: 0}
   empty: {fileID: 0}
   tunas: {fileID: 0}
@@ -6723,6 +7274,9 @@ MonoBehaviour:
   pagar: {fileID: 0}
   _GM: {fileID: 123271521}
   area: {fileID: 0}
+  direction: 0
+  state: 0
+  toNextState: 0
 --- !u!212 &1128979770
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6875,7 +7429,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boardX: 4
   boardY: 2
-  state: {x: 0, y: 0}
   spriteRenderer: {fileID: 0}
   empty: {fileID: 0}
   tunas: {fileID: 0}
@@ -6885,6 +7438,9 @@ MonoBehaviour:
   pagar: {fileID: 0}
   _GM: {fileID: 123271521}
   area: {fileID: 0}
+  direction: 0
+  state: 0
+  toNextState: 0
 --- !u!212 &1151041487
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7145,7 +7701,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boardX: 9
   boardY: 7
-  state: {x: 0, y: 0}
   spriteRenderer: {fileID: 0}
   empty: {fileID: 0}
   tunas: {fileID: 0}
@@ -7155,6 +7710,9 @@ MonoBehaviour:
   pagar: {fileID: 0}
   _GM: {fileID: 123271521}
   area: {fileID: 0}
+  direction: 0
+  state: 0
+  toNextState: 0
 --- !u!212 &1164489343
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7281,7 +7839,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boardX: 6
   boardY: 9
-  state: {x: 0, y: 0}
   spriteRenderer: {fileID: 0}
   empty: {fileID: 0}
   tunas: {fileID: 0}
@@ -7291,6 +7848,9 @@ MonoBehaviour:
   pagar: {fileID: 0}
   _GM: {fileID: 123271521}
   area: {fileID: 0}
+  direction: 0
+  state: 0
+  toNextState: 0
 --- !u!212 &1164992104
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7391,7 +7951,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boardX: 2
   boardY: 8
-  state: {x: 0, y: 0}
   spriteRenderer: {fileID: 0}
   empty: {fileID: 0}
   tunas: {fileID: 0}
@@ -7401,6 +7960,9 @@ MonoBehaviour:
   pagar: {fileID: 0}
   _GM: {fileID: 123271521}
   area: {fileID: 0}
+  direction: 0
+  state: 0
+  toNextState: 0
 --- !u!212 &1231165017
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7553,7 +8115,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boardX: 3
   boardY: 9
-  state: {x: 0, y: 0}
   spriteRenderer: {fileID: 0}
   empty: {fileID: 0}
   tunas: {fileID: 0}
@@ -7563,6 +8124,9 @@ MonoBehaviour:
   pagar: {fileID: 0}
   _GM: {fileID: 123271521}
   area: {fileID: 0}
+  direction: 0
+  state: 0
+  toNextState: 0
 --- !u!212 &1236396187
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7663,7 +8227,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boardX: 2
   boardY: 4
-  state: {x: 0, y: 0}
   spriteRenderer: {fileID: 0}
   empty: {fileID: 0}
   tunas: {fileID: 0}
@@ -7673,6 +8236,9 @@ MonoBehaviour:
   pagar: {fileID: 0}
   _GM: {fileID: 123271521}
   area: {fileID: 0}
+  direction: 0
+  state: 0
+  toNextState: 0
 --- !u!212 &1238951397
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7751,6 +8317,139 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &1243091967
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1243091968}
+  - component: {fileID: 1243091970}
+  - component: {fileID: 1243091969}
+  - component: {fileID: 1243091971}
+  m_Layer: 5
+  m_Name: Right
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1243091968
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1243091967}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1312965462}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 32, y: 0}
+  m_SizeDelta: {x: 32, y: 32}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1243091969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1243091967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1243091970
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1243091967}
+  m_CullTransparentMesh: 1
+--- !u!114 &1243091971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1243091967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1243091969}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 123271521}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: setDirection
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1265883239
 GameObject:
   m_ObjectHideFlags: 0
@@ -7959,7 +8658,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boardX: 8
   boardY: 7
-  state: {x: 0, y: 0}
   spriteRenderer: {fileID: 0}
   empty: {fileID: 0}
   tunas: {fileID: 0}
@@ -7969,6 +8667,9 @@ MonoBehaviour:
   pagar: {fileID: 0}
   _GM: {fileID: 123271521}
   area: {fileID: 0}
+  direction: 0
+  state: 0
+  toNextState: 0
 --- !u!212 &1293098422
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8021,6 +8722,47 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1312965461
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1312965462}
+  m_Layer: 5
+  m_Name: plantingUI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1312965462
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1312965461}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 91034287}
+  - {fileID: 1820062194}
+  - {fileID: 1243091968}
+  - {fileID: 302726644}
+  - {fileID: 1093994834}
+  m_Father: {fileID: 1723222117}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1331437099
 GameObject:
   m_ObjectHideFlags: 0
@@ -8095,7 +8837,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boardX: 3
   boardY: 4
-  state: {x: 0, y: 0}
   spriteRenderer: {fileID: 0}
   empty: {fileID: 0}
   tunas: {fileID: 0}
@@ -8105,6 +8846,9 @@ MonoBehaviour:
   pagar: {fileID: 0}
   _GM: {fileID: 123271521}
   area: {fileID: 0}
+  direction: 0
+  state: 0
+  toNextState: 0
 --- !u!212 &1331437103
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8340,7 +9084,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boardX: 1
   boardY: 9
-  state: {x: 0, y: 0}
   spriteRenderer: {fileID: 0}
   empty: {fileID: 0}
   tunas: {fileID: 0}
@@ -8350,6 +9093,9 @@ MonoBehaviour:
   pagar: {fileID: 0}
   _GM: {fileID: 123271521}
   area: {fileID: 0}
+  direction: 0
+  state: 0
+  toNextState: 0
 --- !u!212 &1366705380
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8502,7 +9248,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boardX: 3
   boardY: 3
-  state: {x: 0, y: 0}
   spriteRenderer: {fileID: 0}
   empty: {fileID: 0}
   tunas: {fileID: 0}
@@ -8512,6 +9257,9 @@ MonoBehaviour:
   pagar: {fileID: 0}
   _GM: {fileID: 123271521}
   area: {fileID: 0}
+  direction: 0
+  state: 0
+  toNextState: 0
 --- !u!212 &1401620305
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8638,7 +9386,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boardX: 6
   boardY: 7
-  state: {x: 0, y: 0}
   spriteRenderer: {fileID: 0}
   empty: {fileID: 0}
   tunas: {fileID: 0}
@@ -8648,6 +9395,9 @@ MonoBehaviour:
   pagar: {fileID: 0}
   _GM: {fileID: 123271521}
   area: {fileID: 0}
+  direction: 0
+  state: 0
+  toNextState: 0
 --- !u!212 &1404241519
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8748,7 +9498,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boardX: 1
   boardY: 2
-  state: {x: 0, y: 0}
   spriteRenderer: {fileID: 0}
   empty: {fileID: 0}
   tunas: {fileID: 0}
@@ -8758,6 +9507,9 @@ MonoBehaviour:
   pagar: {fileID: 0}
   _GM: {fileID: 123271521}
   area: {fileID: 0}
+  direction: 0
+  state: 0
+  toNextState: 0
 --- !u!212 &1428426009
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9044,7 +9796,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boardX: 3
   boardY: 6
-  state: {x: 0, y: 0}
   spriteRenderer: {fileID: 0}
   empty: {fileID: 0}
   tunas: {fileID: 0}
@@ -9054,6 +9805,9 @@ MonoBehaviour:
   pagar: {fileID: 0}
   _GM: {fileID: 123271521}
   area: {fileID: 0}
+  direction: 0
+  state: 0
+  toNextState: 0
 --- !u!212 &1477740833
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9180,7 +9934,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boardX: 8
   boardY: 8
-  state: {x: 0, y: 0}
   spriteRenderer: {fileID: 0}
   empty: {fileID: 0}
   tunas: {fileID: 0}
@@ -9190,6 +9943,9 @@ MonoBehaviour:
   pagar: {fileID: 0}
   _GM: {fileID: 123271521}
   area: {fileID: 0}
+  direction: 0
+  state: 0
+  toNextState: 0
 --- !u!212 &1503420986
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9290,7 +10046,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boardX: 1
   boardY: 6
-  state: {x: 0, y: 0}
   spriteRenderer: {fileID: 0}
   empty: {fileID: 0}
   tunas: {fileID: 0}
@@ -9300,6 +10055,9 @@ MonoBehaviour:
   pagar: {fileID: 0}
   _GM: {fileID: 123271521}
   area: {fileID: 0}
+  direction: 0
+  state: 0
+  toNextState: 0
 --- !u!212 &1514320541
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9426,7 +10184,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boardX: 2
   boardY: 1
-  state: {x: 0, y: 0}
   spriteRenderer: {fileID: 0}
   empty: {fileID: 0}
   tunas: {fileID: 0}
@@ -9436,6 +10193,9 @@ MonoBehaviour:
   pagar: {fileID: 0}
   _GM: {fileID: 123271521}
   area: {fileID: 0}
+  direction: 0
+  state: 0
+  toNextState: 0
 --- !u!212 &1594838298
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9722,7 +10482,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boardX: 6
   boardY: 2
-  state: {x: 0, y: 0}
   spriteRenderer: {fileID: 0}
   empty: {fileID: 0}
   tunas: {fileID: 0}
@@ -9732,6 +10491,9 @@ MonoBehaviour:
   pagar: {fileID: 0}
   _GM: {fileID: 123271521}
   area: {fileID: 0}
+  direction: 0
+  state: 0
+  toNextState: 0
 --- !u!212 &1647188189
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9966,7 +10728,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boardX: 1
   boardY: 4
-  state: {x: 0, y: 0}
   spriteRenderer: {fileID: 0}
   empty: {fileID: 0}
   tunas: {fileID: 0}
@@ -9976,6 +10737,9 @@ MonoBehaviour:
   pagar: {fileID: 0}
   _GM: {fileID: 123271521}
   area: {fileID: 0}
+  direction: 0
+  state: 0
+  toNextState: 0
 --- !u!212 &1681892684
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10128,7 +10892,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boardX: 9
   boardY: 3
-  state: {x: 0, y: 0}
   spriteRenderer: {fileID: 0}
   empty: {fileID: 0}
   tunas: {fileID: 0}
@@ -10138,6 +10901,9 @@ MonoBehaviour:
   pagar: {fileID: 0}
   _GM: {fileID: 123271521}
   area: {fileID: 0}
+  direction: 0
+  state: 0
+  toNextState: 0
 --- !u!212 &1684131865
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10264,7 +11030,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boardX: 5
   boardY: 9
-  state: {x: 0, y: 0}
   spriteRenderer: {fileID: 0}
   empty: {fileID: 0}
   tunas: {fileID: 0}
@@ -10274,6 +11039,9 @@ MonoBehaviour:
   pagar: {fileID: 0}
   _GM: {fileID: 123271521}
   area: {fileID: 0}
+  direction: 0
+  state: 0
+  toNextState: 0
 --- !u!212 &1687117768
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10400,7 +11168,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boardX: 9
   boardY: 4
-  state: {x: 0, y: 0}
   spriteRenderer: {fileID: 0}
   empty: {fileID: 0}
   tunas: {fileID: 0}
@@ -10410,6 +11177,9 @@ MonoBehaviour:
   pagar: {fileID: 0}
   _GM: {fileID: 123271521}
   area: {fileID: 0}
+  direction: 0
+  state: 0
+  toNextState: 0
 --- !u!212 &1687834011
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10536,7 +11306,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boardX: 5
   boardY: 1
-  state: {x: 0, y: 0}
   spriteRenderer: {fileID: 0}
   empty: {fileID: 0}
   tunas: {fileID: 0}
@@ -10546,6 +11315,9 @@ MonoBehaviour:
   pagar: {fileID: 0}
   _GM: {fileID: 123271521}
   area: {fileID: 0}
+  direction: 0
+  state: 0
+  toNextState: 0
 --- !u!212 &1712377498
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10598,6 +11370,44 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1723222116
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1723222117}
+  m_Layer: 5
+  m_Name: UI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1723222117
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1723222116}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 562934495}
+  - {fileID: 1312965462}
+  m_Father: {fileID: 825663004}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1774950529
 GameObject:
   m_ObjectHideFlags: 0
@@ -10646,7 +11456,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boardX: 1
   boardY: 1
-  state: {x: 0, y: 0}
   spriteRenderer: {fileID: 0}
   empty: {fileID: 0}
   tunas: {fileID: 0}
@@ -10656,6 +11465,9 @@ MonoBehaviour:
   pagar: {fileID: 0}
   _GM: {fileID: 123271521}
   area: {fileID: 0}
+  direction: 0
+  state: 0
+  toNextState: 0
 --- !u!212 &1774950532
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10782,7 +11594,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boardX: 1
   boardY: 8
-  state: {x: 0, y: 0}
   spriteRenderer: {fileID: 0}
   empty: {fileID: 0}
   tunas: {fileID: 0}
@@ -10792,6 +11603,9 @@ MonoBehaviour:
   pagar: {fileID: 0}
   _GM: {fileID: 123271521}
   area: {fileID: 0}
+  direction: 0
+  state: 0
+  toNextState: 0
 --- !u!212 &1781986447
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10918,7 +11732,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boardX: 2
   boardY: 6
-  state: {x: 0, y: 0}
   spriteRenderer: {fileID: 0}
   empty: {fileID: 0}
   tunas: {fileID: 0}
@@ -10928,6 +11741,9 @@ MonoBehaviour:
   pagar: {fileID: 0}
   _GM: {fileID: 123271521}
   area: {fileID: 0}
+  direction: 0
+  state: 0
+  toNextState: 0
 --- !u!212 &1801562079
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11006,6 +11822,139 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &1820062193
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1820062194}
+  - component: {fileID: 1820062196}
+  - component: {fileID: 1820062195}
+  - component: {fileID: 1820062197}
+  m_Layer: 5
+  m_Name: Left
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1820062194
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1820062193}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1312965462}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -32, y: 0}
+  m_SizeDelta: {x: 32, y: 32}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1820062195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1820062193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1820062196
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1820062193}
+  m_CullTransparentMesh: 1
+--- !u!114 &1820062197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1820062193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1820062195}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 123271521}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: setDirection
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1864779362
 GameObject:
   m_ObjectHideFlags: 0
@@ -11536,7 +12485,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boardX: 7
   boardY: 2
-  state: {x: 0, y: 0}
   spriteRenderer: {fileID: 0}
   empty: {fileID: 0}
   tunas: {fileID: 0}
@@ -11546,6 +12494,9 @@ MonoBehaviour:
   pagar: {fileID: 0}
   _GM: {fileID: 123271521}
   area: {fileID: 0}
+  direction: 0
+  state: 0
+  toNextState: 0
 --- !u!212 &1944290354
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11672,7 +12623,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boardX: 9
   boardY: 5
-  state: {x: 0, y: 0}
   spriteRenderer: {fileID: 0}
   empty: {fileID: 0}
   tunas: {fileID: 0}
@@ -11682,6 +12632,9 @@ MonoBehaviour:
   pagar: {fileID: 0}
   _GM: {fileID: 123271521}
   area: {fileID: 0}
+  direction: 0
+  state: 0
+  toNextState: 0
 --- !u!212 &1957499121
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11808,7 +12761,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boardX: 4
   boardY: 9
-  state: {x: 0, y: 0}
   spriteRenderer: {fileID: 0}
   empty: {fileID: 0}
   tunas: {fileID: 0}
@@ -11818,6 +12770,9 @@ MonoBehaviour:
   pagar: {fileID: 0}
   _GM: {fileID: 123271521}
   area: {fileID: 0}
+  direction: 0
+  state: 0
+  toNextState: 0
 --- !u!212 &1980635974
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11944,7 +12899,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boardX: 4
   boardY: 7
-  state: {x: 0, y: 0}
   spriteRenderer: {fileID: 0}
   empty: {fileID: 0}
   tunas: {fileID: 0}
@@ -11954,6 +12908,9 @@ MonoBehaviour:
   pagar: {fileID: 0}
   _GM: {fileID: 123271521}
   area: {fileID: 0}
+  direction: 0
+  state: 0
+  toNextState: 0
 --- !u!212 &1993130401
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12080,7 +13037,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boardX: 8
   boardY: 6
-  state: {x: 0, y: 0}
   spriteRenderer: {fileID: 0}
   empty: {fileID: 0}
   tunas: {fileID: 0}
@@ -12090,6 +13046,9 @@ MonoBehaviour:
   pagar: {fileID: 0}
   _GM: {fileID: 123271521}
   area: {fileID: 0}
+  direction: 0
+  state: 0
+  toNextState: 0
 --- !u!212 &2005484171
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12216,7 +13175,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boardX: 7
   boardY: 4
-  state: {x: 0, y: 0}
   spriteRenderer: {fileID: 0}
   empty: {fileID: 0}
   tunas: {fileID: 0}
@@ -12226,6 +13184,9 @@ MonoBehaviour:
   pagar: {fileID: 0}
   _GM: {fileID: 123271521}
   area: {fileID: 0}
+  direction: 0
+  state: 0
+  toNextState: 0
 --- !u!212 &2054678409
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12352,7 +13313,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boardX: 8
   boardY: 5
-  state: {x: 0, y: 0}
   spriteRenderer: {fileID: 0}
   empty: {fileID: 0}
   tunas: {fileID: 0}
@@ -12362,6 +13322,9 @@ MonoBehaviour:
   pagar: {fileID: 0}
   _GM: {fileID: 123271521}
   area: {fileID: 0}
+  direction: 0
+  state: 0
+  toNextState: 0
 --- !u!212 &2080053102
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12622,7 +13585,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boardX: 4
   boardY: 8
-  state: {x: 0, y: 0}
   spriteRenderer: {fileID: 0}
   empty: {fileID: 0}
   tunas: {fileID: 0}
@@ -12632,6 +13594,9 @@ MonoBehaviour:
   pagar: {fileID: 0}
   _GM: {fileID: 123271521}
   area: {fileID: 0}
+  direction: 0
+  state: 0
+  toNextState: 0
 --- !u!212 &2129725208
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12732,7 +13697,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boardX: 1
   boardY: 7
-  state: {x: 0, y: 0}
   spriteRenderer: {fileID: 0}
   empty: {fileID: 0}
   tunas: {fileID: 0}
@@ -12742,6 +13706,9 @@ MonoBehaviour:
   pagar: {fileID: 0}
   _GM: {fileID: 123271521}
   area: {fileID: 0}
+  direction: 0
+  state: 0
+  toNextState: 0
 --- !u!212 &2130722715
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12868,7 +13835,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boardX: 2
   boardY: 7
-  state: {x: 0, y: 0}
   spriteRenderer: {fileID: 0}
   empty: {fileID: 0}
   tunas: {fileID: 0}
@@ -12878,6 +13844,9 @@ MonoBehaviour:
   pagar: {fileID: 0}
   _GM: {fileID: 123271521}
   area: {fileID: 0}
+  direction: 0
+  state: 0
+  toNextState: 0
 --- !u!212 &2136105636
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13030,7 +13999,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boardX: 9
   boardY: 9
-  state: {x: 0, y: 0}
   spriteRenderer: {fileID: 0}
   empty: {fileID: 0}
   tunas: {fileID: 0}
@@ -13040,6 +14008,9 @@ MonoBehaviour:
   pagar: {fileID: 0}
   _GM: {fileID: 123271521}
   area: {fileID: 0}
+  direction: 0
+  state: 0
+  toNextState: 0
 --- !u!212 &2143661617
 SpriteRenderer:
   m_ObjectHideFlags: 0

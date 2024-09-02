@@ -15,8 +15,9 @@ public class ItemData : MonoBehaviour
         public int spd;
         public int grow;
         public int atkRadius;
+        public int atkRange;
 
-        public Item(int _id, string _name, Sprite _sprite, string _desc, int _price, int _hp, int _atk, int _spd, int _grow, int _atkRadius){
+        public Item(int _id, string _name, Sprite _sprite, string _desc, int _price, int _hp, int _atk, int _spd, int _grow, int _atkRadius, int _atkRange){
             id = _id;
             name = _name;
             sprite = _sprite;
@@ -27,6 +28,7 @@ public class ItemData : MonoBehaviour
             spd = _spd; 
             grow = _grow;
             atkRadius = _atkRadius;
+            atkRange = _atkRange;
         }
     }
 
@@ -54,13 +56,13 @@ public class ItemData : MonoBehaviour
         }
         //
         items = new Item[7];
-        items[0] = new Item(0, "Biji Cabe", Resources.Load<Sprite>("Sprite/Inventory/Cabe"), "Biji Cabe Untuk Ditanam", 5, 5, 0, 0, 1, 0);
-        items[1] = new Item(1, "Biji Tomat", null, "Biji Tomat Untuk Ditanam", 10, 5, 3, 3, 0, 1);
-        items[2] = new Item(2, "Biji Anggur", null, "Biji Anggur Untuk Ditanam", 20, 5, 2, 5, 4, 1);
-        items[3] = new Item(3, "Biji Semangka", null, "Biji Semangka Untuk Ditanam", 30, 5, 5, 2, 5, 2);
-        items[4] = new Item(4, "Pagar", null, "Pagar#", 15, 15, 0, 0, 0, 0);
-        items[5] = new Item(5, "Pupuk", null, "Untuk mempercepat pertumbuhan tanaman", 10, 0, 0, 0, 0, 0);
-        items[6] = new Item(6, "Potion", null, "Untuk menyembuhkan tanaman", 10, 0, 0, 0, 0, 0);
+        items[0] = new Item(0, "Biji Cabe", Resources.Load<Sprite>("Sprite/Inventory/Cabe"), "Biji Cabe Untuk Ditanam", 5, 5, 0, 0, 1, 0, 0);
+        items[1] = new Item(1, "Biji Tomat", null, "Biji Tomat Untuk Ditanam", 10, 5, 3, 3, 0, 1, 3);
+        items[2] = new Item(2, "Biji Anggur", null, "Biji Anggur Untuk Ditanam", 20, 5, 2, 5, 4, 1, 3);
+        items[3] = new Item(3, "Biji Semangka", null, "Biji Semangka Untuk Ditanam", 30, 5, 5, 2, 5, 2, 3);
+        items[4] = new Item(4, "Pagar", null, "Pagar#", 15, 15, 0, 0, 0, 0, 0);
+        items[5] = new Item(5, "Pupuk", null, "Untuk mempercepat pertumbuhan tanaman", 10, 0, 0, 0, 0, 0, 0);
+        items[6] = new Item(6, "Potion", null, "Untuk menyembuhkan tanaman", 10, 0, 0, 0, 0, 0, 0);
     }
 
     // Update is called once per frame

@@ -11,6 +11,11 @@ public class GameManager : MonoBehaviour
     public int _hand;
     public int[] _InventorySlot;
     public int[,] _tanah;
+    public GameObject _darkTint;
+    public GameObject _plantingUI;
+    public int _x, _y;  //-1 = null
+    public GameObject _tiles;
+    public string _state = "none";
 
     // Start is called before the first frame update
     void Start()
@@ -69,4 +74,58 @@ public class GameManager : MonoBehaviour
         //[!]TODO bikin pengecualian buat pupuk & potion
     }
 
+    public void darkTint(int state){
+        if(state == 0){
+            _darkTint.SetActive(false);
+        }
+        else if(state == 1){
+            _darkTint.SetActive(true);
+        }
+    }
+
+    public void plantingUI(int state){
+        if(state == 0){
+            _plantingUI.SetActive(false);
+        }
+        else if(state == 1){
+            _plantingUI.SetActive(true);
+        }
+    }
+
+    public void setupG(int x, int y){
+        _x = x;
+        _y = y;
+    }
+
+    GameObject findCurrentTile(GameObject tiles, int x, int y)
+    {
+        foreach (Transform child in tiles.transform) // Loop through each child of the current GameObject
+        {
+            Tile tileScript = child.GetComponent<Tile>(); // Get the script attached to the child
+            if (tileScript != null && tileScript.boardX == x && tileScript.boardY == y)
+            {
+                return child.gameObject; // Return the child GameObject if the value matches
+            }
+        }
+
+        return null; // Return null if no matching child is found
+    }
+
+    public void setDirection(int dir){  // 0 = null; 1= Up; 2 = Left; 3 = Right; 4 = Down
+        if(_x != -1 && _y != -1){
+            if(dir != 0){
+                GameObject currentTile = findCurrentTile(_tiles, _x, _y);
+                Tile tileData = currentTile.GetComponent<Tile>();
+                tileData.setDir(dir);
+                tileData.changeSprite(_ItemData.items[_InventorySlot[_hand]].sprite);
+            }
+            darkTint(0);
+            Time.timeScale = 1.0f;
+            plantingUI(0);
+            _x = -1;
+            _y = -1;
+            _state = "none";
+            _hand = 0;
+        }
+    }
 }
